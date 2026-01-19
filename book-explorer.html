@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Readify | Book Explorer</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#3a57ff" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">Readify</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" data-nav-toggle>
+          ☰
+        </button>
+        <nav class="site-nav" data-nav-menu>
+          <a href="index.html">Home</a>
+          <a href="book-explorer.html">Book Explorer</a>
+          <a href="progress-tracker.html">Progress Tracker</a>
+          <a href="random-recommender.html">Random Recommender</a>
+          <a href="reading-flow.html">Reading Flow</a>
+          <a href="feedback.html">Feedback</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="section container">
+        <h1 class="page-title">Book Explorer</h1>
+        <p class="page-intro">Search by title, author, or genre.</p>
+      </section>
+
+      <section class="section container card">
+        <form class="grid grid-2">
+          <label>
+            Search
+            <input type="text" placeholder="Search by title or author" data-search />
+          </label>
+          <label>
+            Genre
+            <select data-genre>
+              <option value="All">All</option>
+              <option value="Fiction">Fiction</option>
+              <option value="Sci-Fi">Sci-Fi</option>
+              <option value="Romance">Romance</option>
+              <option value="Non-Fiction">Non-Fiction</option>
+            </select>
+          </label>
+        </form>
+      </section>
+
+      <section class="section container">
+        <div class="book-grid" data-book-grid></div>
+      </section>
+
+      <div class="modal" data-modal>
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+          <h2 class="section-title" data-modal-title>Book Title</h2>
+              <p class="helper-text" data-modal-author>Author</p>
+            </div>
+            <button class="modal-close" type="button" data-modal-close>×</button>
+          </div>
+          <p data-modal-synopsis>Synopsis</p>
+          <h3 class="section-title">Sequels</h3>
+          <ul class="list" data-modal-sequels></ul>
+          <h3 class="section-title">Ratings</h3>
+          <table>
+            <tbody data-modal-ratings></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© 2026 Readify</div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/books.js"></script>
+  </body>
+</html>

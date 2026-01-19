@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Readify | Progress Tracker</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#3a57ff" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">Readify</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" data-nav-toggle>
+          ☰
+        </button>
+        <nav class="site-nav" data-nav-menu>
+          <a href="index.html">Home</a>
+          <a href="book-explorer.html">Book Explorer</a>
+          <a href="progress-tracker.html">Progress Tracker</a>
+          <a href="random-recommender.html">Random Recommender</a>
+          <a href="reading-flow.html">Reading Flow</a>
+          <a href="feedback.html">Feedback</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="section container">
+        <h1 class="page-title">Progress Tracker</h1>
+        <p class="page-intro">Track your reading pace and estimate your finish date.</p>
+      </section>
+
+      <section class="section container grid grid-2">
+        <div class="card">
+          <form data-tracker-form>
+            <label>
+              Total pages
+              <input type="number" name="totalPages" min="1" required />
+            </label>
+            <label>
+              Pages read
+              <input type="number" name="pagesRead" min="0" required />
+            </label>
+            <label>
+              Reading speed (pages per day)
+              <input type="number" name="speed" min="1" required />
+            </label>
+            <button class="button" type="submit">Update Progress</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <h2 class="section-title">Progress Summary</h2>
+          <div class="progress-bar">
+            <div class="progress-bar-fill" data-progress-fill></div>
+          </div>
+          <p class="helper-text">Completed: <span data-progress-percent>0%</span></p>
+          <p class="helper-text">Days left: <span data-progress-days>0 day(s)</span></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© 2026 Readify</div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/tracker.js"></script>
+  </body>
+</html>

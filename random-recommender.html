@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Readify | Random Recommender</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#3a57ff" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">Readify</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" data-nav-toggle>
+          ☰
+        </button>
+        <nav class="site-nav" data-nav-menu>
+          <a href="index.html">Home</a>
+          <a href="book-explorer.html">Book Explorer</a>
+          <a href="progress-tracker.html">Progress Tracker</a>
+          <a href="random-recommender.html">Random Recommender</a>
+          <a href="reading-flow.html">Reading Flow</a>
+          <a href="feedback.html">Feedback</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="section container">
+        <h1 class="page-title">Random Recommender</h1>
+        <p class="page-intro">Pick a genre and length for a quick suggestion.</p>
+      </section>
+
+      <section class="section container grid grid-2">
+        <div class="card">
+          <label>
+            Genre
+            <select data-rec-genre>
+              <option value="All">All</option>
+              <option value="Fiction">Fiction</option>
+              <option value="Sci-Fi">Sci-Fi</option>
+              <option value="Romance">Romance</option>
+              <option value="Non-Fiction">Non-Fiction</option>
+              <option value="Mystery">Mystery</option>
+            </select>
+          </label>
+          <label>
+            Length
+            <select data-rec-length>
+              <option value="All">All</option>
+              <option value="Short">Short</option>
+              <option value="Medium">Medium</option>
+              <option value="Long">Long</option>
+            </select>
+          </label>
+          <button class="button" type="button" data-pick-button>Pick Again</button>
+        </div>
+
+        <div class="card">
+          <h2 class="section-title">Your Recommendation</h2>
+          <p class="helper-text" data-rec-title>Pick a book to get started.</p>
+          <p data-rec-author></p>
+        </div>
+      </section>
+
+      <section class="section container card">
+        <h2 class="section-title">Your Reading List</h2>
+        <ul class="list" data-reading-list></ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© 2026 Readify</div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/recommender.js"></script>
+  </body>
+</html>

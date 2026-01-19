@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Readify | Home</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#3a57ff" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">Readify</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" data-nav-toggle>
+          ☰
+        </button>
+        <nav class="site-nav" data-nav-menu>
+          <a href="index.html">Home</a>
+          <a href="book-explorer.html">Book Explorer</a>
+          <a href="progress-tracker.html">Progress Tracker</a>
+          <a href="random-recommender.html">Random Recommender</a>
+          <a href="reading-flow.html">Reading Flow</a>
+          <a href="feedback.html">Feedback</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="section hero container">
+        <div>
+          <h1 class="page-title">Welcome to Readify</h1>
+          <p class="page-intro">Your simple reading companion.</p>
+          <div class="hero-actions">
+            <a class="button" href="book-explorer.html">Explore Books</a>
+            <a class="button secondary" href="progress-tracker.html">Track Progress</a>
+          </div>
+        </div>
+        <div class="hero-image">Image Placeholder</div>
+      </section>
+
+      <section class="section container card">
+        <h2 class="section-title">Book Quote of the Moment</h2>
+        <p class="helper-text" data-quote-text>Loading quote...</p>
+        <p data-quote-author>—</p>
+      </section>
+
+      <section class="section container card">
+        <h2 class="section-title">Author of the Day</h2>
+        <p class="helper-text" data-author-of-day>Loading author...</p>
+      </section>
+
+      <section class="section container card">
+        <h2 class="section-title">Newsletter</h2>
+        <p class="helper-text">Get simple reading tips each week.</p>
+        <form data-newsletter-form>
+          <label for="newsletter-email">Email address</label>
+          <input id="newsletter-email" name="email" type="email" placeholder="you@example.com" required />
+          <button class="button" type="submit">Subscribe</button>
+          <p class="success" data-newsletter-message></p>
+        </form>
+      </section>
+
+      <section class="section container">
+        <h2 class="section-title">Quick Navigation</h2>
+        <div class="grid grid-3">
+          <a class="card link-card" href="book-explorer.html">
+            <h3>Explore Books</h3>
+            <p class="helper-text">Browse book cards and genres.</p>
+          </a>
+          <a class="card link-card" href="progress-tracker.html">
+            <h3>Track Reading Progress</h3>
+            <p class="helper-text">See how far you have read.</p>
+          </a>
+          <a class="card link-card" href="random-recommender.html">
+            <h3>Get Book Recommendations</h3>
+            <p class="helper-text">Pick a random book to try.</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© 2026 Readify</div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/home.js"></script>
+  </body>
+</html>

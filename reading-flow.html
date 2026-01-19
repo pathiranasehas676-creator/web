@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Readify | Reading Flow</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#3a57ff" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">Readify</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" data-nav-toggle>
+          ☰
+        </button>
+        <nav class="site-nav" data-nav-menu>
+          <a href="index.html">Home</a>
+          <a href="book-explorer.html">Book Explorer</a>
+          <a href="progress-tracker.html">Progress Tracker</a>
+          <a href="random-recommender.html">Random Recommender</a>
+          <a href="reading-flow.html">Reading Flow</a>
+          <a href="feedback.html">Feedback</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="section container">
+        <h1 class="page-title">Reading Flow</h1>
+        <p class="page-intro">Stay focused with cozy sounds and a simple checklist.</p>
+      </section>
+
+      <section class="section container grid grid-2">
+        <div class="card">
+          <h2 class="section-title">Cozy Background Sound</h2>
+          <p class="helper-text">Click play to start a soft tone.</p>
+          <button class="button" type="button" data-audio-toggle>Play Cozy Sound</button>
+        </div>
+
+        <div class="card">
+          <h2 class="section-title">Focus Mode</h2>
+          <p class="helper-text">Toggle a calm focus view.</p>
+          <button class="button secondary" type="button" data-focus-toggle>Toggle Focus Mode</button>
+        </div>
+      </section>
+
+      <section class="section container card">
+        <h2 class="section-title">Completed Books</h2>
+        <form data-completed-form>
+          <label>
+            Book title
+            <input type="text" name="title" placeholder="Enter a completed book" required />
+          </label>
+          <button class="button" type="submit">Add Book</button>
+        </form>
+        <ul class="list" data-completed-list></ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© 2026 Readify</div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/flow.js"></script>
+  </body>
+</html>

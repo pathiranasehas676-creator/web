@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Readify | Feedback</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#3a57ff" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">Readify</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" data-nav-toggle>
+          ☰
+        </button>
+        <nav class="site-nav" data-nav-menu>
+          <a href="index.html">Home</a>
+          <a href="book-explorer.html">Book Explorer</a>
+          <a href="progress-tracker.html">Progress Tracker</a>
+          <a href="random-recommender.html">Random Recommender</a>
+          <a href="reading-flow.html">Reading Flow</a>
+          <a href="feedback.html">Feedback</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="section container">
+        <h1 class="page-title">Feedback</h1>
+        <p class="page-intro">We would love to hear your thoughts.</p>
+      </section>
+
+      <section class="section container grid grid-2">
+        <div class="card">
+          <h2 class="section-title">Send a message</h2>
+          <form data-feedback-form>
+            <label>
+              Name
+              <input type="text" name="name" required />
+              <span class="error" data-error-name></span>
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+              <span class="error" data-error-email></span>
+            </label>
+            <label>
+              Message
+              <textarea name="message" required></textarea>
+              <span class="error" data-error-message></span>
+            </label>
+            <button class="button" type="submit">Submit Feedback</button>
+            <p class="success" data-feedback-success></p>
+          </form>
+        </div>
+
+        <div class="card">
+          <h2 class="section-title">FAQ</h2>
+          <div class="faq-list">
+            <div class="accordion-item" data-accordion-item>
+              <button class="accordion-button" type="button" data-accordion-button>
+                How do you use feedback?
+              </button>
+              <div class="accordion-content">
+                <p class="helper-text">We review messages to improve the app for students.</p>
+              </div>
+            </div>
+            <div class="accordion-item" data-accordion-item>
+              <button class="accordion-button" type="button" data-accordion-button>
+                Can I update my message?
+              </button>
+              <div class="accordion-content">
+                <p class="helper-text">Yes, send a new message anytime.</p>
+              </div>
+            </div>
+            <div class="accordion-item" data-accordion-item>
+              <button class="accordion-button" type="button" data-accordion-button>
+                Is my data shared?
+              </button>
+              <div class="accordion-content">
+                <p class="helper-text">No, it stays in your browser storage.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© 2026 Readify</div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/feedback.js"></script>
+  </body>
+</html>
