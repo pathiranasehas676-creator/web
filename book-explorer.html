@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Readify | Book Explorer</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-container">
+        <a class="logo" href="index.html">Readify</a>
+        <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+        <label class="nav-toggle-label" for="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="book-explorer.html">Book Explorer</a>
+          <a href="progress-tracker.html">Progress Tracker</a>
+          <a href="random-recommender.html">Random Recommender</a>
+          <a href="reading-flow.html">Reading Flow</a>
+          <a href="feedback.html">Feedback</a>
+        </nav>
+      </div>
+    </header>
+    <main class="page-content">
+      <section class="page-header">
+        <div>
+          <h1>Book Explorer</h1>
+          <p>Browse curated titles, search by author, and discover your next favorite read.</p>
+        </div>
+        <div class="page-actions">
+          <button class="button secondary" type="button" data-clear-filters>Clear Filters</button>
+          <button class="button" type="button" data-featured>Featured Picks</button>
+        </div>
+      </section>
+
+      <section class="filters card">
+        <div class="filters-grid">
+          <label class="field">
+            <span>Search by title</span>
+            <input type="text" name="title" placeholder="Search titles" data-filter-title />
+          </label>
+          <label class="field">
+            <span>Search by author</span>
+            <input type="text" name="author" placeholder="Search authors" data-filter-author />
+          </label>
+          <label class="field">
+            <span>Genre</span>
+            <select name="genre" data-filter-genre>
+              <option value="">All genres</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Explore Books</h2>
+        <div class="grid grid-3" data-book-grid></div>
+      </section>
+    </main>
+
+    <div class="modal" data-book-modal aria-hidden="true">
+      <div class="modal-overlay" data-close-modal></div>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="book-modal-title">
+        <button class="modal-close" type="button" data-close-modal aria-label="Close">
+          ×
+        </button>
+        <div class="modal-header">
+          <img class="modal-cover" src="" alt="" data-modal-cover />
+          <div>
+            <h2 id="book-modal-title" data-modal-title></h2>
+            <p class="modal-author" data-modal-author></p>
+            <span class="badge" data-modal-genre></span>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div>
+            <h3 class="section-title">Synopsis</h3>
+            <p data-modal-synopsis></p>
+          </div>
+          <div>
+            <h3 class="section-title">Sequels</h3>
+            <ul class="sequel-list" data-modal-sequels></ul>
+          </div>
+          <div>
+            <h3 class="section-title">Ratings</h3>
+            <table class="rating-table">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Score</th>
+                </tr>
+              </thead>
+              <tbody data-modal-ratings></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/book-explorer.js"></script>
+  </body>
+</html>
