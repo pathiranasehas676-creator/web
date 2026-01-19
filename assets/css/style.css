@@ -687,3 +687,77 @@ body.focus-mode .focus-preview {
     grid-template-columns: 1fr;
   }
 }
+
+.feedback-form {
+  margin-top: 1.5rem;
+}
+
+.field-error {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: #d14343;
+}
+
+.success-message {
+  margin-top: 1.5rem;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  background: rgba(58, 87, 255, 0.12);
+  color: var(--accent-dark);
+  font-weight: 600;
+  display: none;
+}
+
+.success-message.is-visible {
+  display: block;
+}
+
+.accordion {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.accordion-item {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: rgba(58, 87, 255, 0.04);
+  overflow: hidden;
+}
+
+.accordion-trigger {
+  width: 100%;
+  text-align: left;
+  padding: 1rem 1.2rem;
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.accordion-trigger::after {
+  content: "+";
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+.accordion-item.is-open .accordion-trigger::after {
+  content: "–";
+}
+
+.accordion-panel {
+  padding: 0 1.2rem 1rem;
+  color: var(--muted);
+  display: none;
+}
+
+.accordion-item.is-open .accordion-panel {
+  display: block;
+}
