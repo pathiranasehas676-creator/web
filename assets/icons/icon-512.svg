@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Readify icon">
+  <rect width="512" height="512" rx="96" fill="#3a57ff" />
+  <path d="M144 144h176a56 56 0 0 1 56 56v176a0 0 0 0 1 0 0H200a56 56 0 0 0-56 56V144z" fill="#ffffff" opacity="0.18" />
+  <path d="M188 176h140a40 40 0 0 1 40 40v168H236a40 40 0 0 0-40 40V176z" fill="#ffffff" />
+  <rect x="228" y="232" width="116" height="20" rx="10" fill="#3a57ff" opacity="0.8" />
+  <rect x="228" y="276" width="116" height="20" rx="10" fill="#3a57ff" opacity="0.6" />
+  <rect x="228" y="320" width="88" height="20" rx="10" fill="#3a57ff" opacity="0.5" />
+</svg>

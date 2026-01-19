@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Readify | Feedback</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#3a57ff" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-container">
+        <a class="logo" href="index.html">Readify</a>
+        <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+        <label class="nav-toggle-label" for="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="book-explorer.html">Book Explorer</a>
+          <a href="progress-tracker.html">Progress Tracker</a>
+          <a href="random-recommender.html">Random Recommender</a>
+          <a href="reading-flow.html">Reading Flow</a>
+          <a href="feedback.html">Feedback</a>
+        </nav>
+      </div>
+    </header>
+    <main class="page-content">
+      <section class="page-header">
+        <div>
+          <h1>Feedback</h1>
+          <p>Share what you love, request features, and help us refine Readify.</p>
+        </div>
+      </section>
+
+      <section class="grid grid-2">
+        <div class="card">
+          <h2 class="section-title">Send us a note</h2>
+          <p class="muted">We read every message and keep your details private.</p>
+          <form class="form feedback-form" data-feedback-form>
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Jane Reader" autocomplete="name" required />
+              <span class="field-error" data-error-for="name"></span>
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="jane@readify.com" autocomplete="email" required />
+              <span class="field-error" data-error-for="email"></span>
+            </label>
+            <label>
+              Message
+              <textarea name="message" placeholder="Tell us what's on your mind" required></textarea>
+              <span class="field-error" data-error-for="message"></span>
+            </label>
+            <div class="form-actions">
+              <button class="button" type="submit">Submit feedback</button>
+              <button class="button secondary" type="reset">Clear</button>
+            </div>
+          </form>
+          <div class="success-message" role="status" aria-live="polite" data-success-message>
+            Thanks for sharing! Your feedback has been saved.
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="section-title">FAQ</h2>
+          <p class="muted">Quick answers to common questions about Readify.</p>
+          <div class="accordion" data-accordion>
+            <div class="accordion-item">
+              <button class="accordion-trigger" type="button" aria-expanded="false">
+                How do you use my feedback?
+              </button>
+              <div class="accordion-panel" role="region">
+                <p>We group similar requests and prioritize the ideas that help the most readers.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" type="button" aria-expanded="false">
+                Can I update my feedback later?
+              </button>
+              <div class="accordion-panel" role="region">
+                <p>Absolutely! Submit a new note and we will review it alongside your previous message.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" type="button" aria-expanded="false">
+                Do you share my information?
+              </button>
+              <div class="accordion-panel" role="region">
+                <p>No. Your feedback stays on this device and is only stored locally for your reference.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/feedback.js"></script>
+  </body>
+</html>

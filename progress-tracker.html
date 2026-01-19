@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Readify | Progress Tracker</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#3a57ff" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-container">
+        <a class="logo" href="index.html">Readify</a>
+        <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+        <label class="nav-toggle-label" for="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="book-explorer.html">Book Explorer</a>
+          <a href="progress-tracker.html">Progress Tracker</a>
+          <a href="random-recommender.html">Random Recommender</a>
+          <a href="reading-flow.html">Reading Flow</a>
+          <a href="feedback.html">Feedback</a>
+        </nav>
+      </div>
+    </header>
+    <main class="page-content">
+      <section class="page-header">
+        <div>
+          <h1>Progress Tracker</h1>
+          <p>Log your reading pace and stay on track to finish your next book.</p>
+        </div>
+      </section>
+
+      <section class="grid grid-2">
+        <form class="card form" data-progress-form>
+          <label>
+            Total pages
+            <input type="number" name="totalPages" min="1" placeholder="e.g. 320" required />
+          </label>
+          <label>
+            Pages read
+            <input type="number" name="pagesRead" min="0" placeholder="e.g. 120" required />
+          </label>
+          <label>
+            Reading speed (pages per day)
+            <input type="number" name="speed" min="1" placeholder="e.g. 25" required />
+          </label>
+          <div class="form-actions">
+            <button class="button" type="submit">Update Progress</button>
+            <button class="button secondary" type="button" data-reset-progress>Reset</button>
+          </div>
+        </form>
+
+        <div class="card progress-summary">
+          <div>
+            <h2 class="section-title">Progress Overview</h2>
+            <p class="muted" data-progress-message>Enter your details to see your progress.</p>
+          </div>
+          <div class="progress-bar" aria-label="Reading progress">
+            <div class="progress-bar-fill" data-progress-bar></div>
+          </div>
+          <div class="progress-stats">
+            <div>
+              <span class="stat-label">Completed</span>
+              <span class="stat-value" data-progress-percent>0%</span>
+            </div>
+            <div>
+              <span class="stat-label">Finish estimate</span>
+              <span class="stat-value" data-progress-finish>—</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/progress-tracker.js"></script>
+  </body>
+</html>
