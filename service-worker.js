@@ -1,0 +1,1 @@
+// Readify service worker placeholder.
