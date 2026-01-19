@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Readify | Reading Flow</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#3a57ff" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-container">
+        <a class="logo" href="index.html">Readify</a>
+        <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+        <label class="nav-toggle-label" for="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="book-explorer.html">Book Explorer</a>
+          <a href="progress-tracker.html">Progress Tracker</a>
+          <a href="random-recommender.html">Random Recommender</a>
+          <a href="reading-flow.html">Reading Flow</a>
+          <a href="feedback.html">Feedback</a>
+        </nav>
+      </div>
+    </header>
+    <main class="page-content">
+      <section class="page-header">
+        <div>
+          <h1>Reading Flow</h1>
+          <p>Create a cozy space, stay focused, and celebrate every finished book.</p>
+        </div>
+      </section>
+
+      <section class="grid grid-2">
+        <div class="card flow-card">
+          <h2 class="section-title">Cozy Soundscape</h2>
+          <p class="muted">Tap play to start a soft ambient tone while you read.</p>
+          <div class="flow-actions">
+            <button class="button" type="button" data-sound-toggle>Play Sounds</button>
+            <button class="button secondary" type="button" data-focus-toggle>Enter Focus Mode</button>
+          </div>
+        </div>
+
+        <div class="card flow-card">
+          <h2 class="section-title">Focus Mode</h2>
+          <p class="muted">
+            Minimize distractions with a simplified view and gentle background tinting.
+          </p>
+          <div class="focus-preview">
+            <span>Focus status</span>
+            <strong data-focus-status>Off</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="card flow-card">
+        <div class="reading-list-header">
+          <h2 class="section-title">Completed Books</h2>
+          <button class="button secondary" type="button" data-clear-completed>Clear Completed</button>
+        </div>
+        <form class="flow-form" data-complete-form>
+          <input type="text" name="title" placeholder="Add completed book title" required />
+          <input type="text" name="author" placeholder="Author (optional)" />
+          <button class="button" type="submit">Mark Completed</button>
+        </form>
+        <ul class="reading-list-items" data-completed-list></ul>
+      </section>
+    </main>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/reading-flow.js"></script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Readify | Random Recommender</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#3a57ff" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-container">
+        <a class="logo" href="index.html">Readify</a>
+        <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+        <label class="nav-toggle-label" for="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="book-explorer.html">Book Explorer</a>
+          <a href="progress-tracker.html">Progress Tracker</a>
+          <a href="random-recommender.html">Random Recommender</a>
+          <a href="reading-flow.html">Reading Flow</a>
+          <a href="feedback.html">Feedback</a>
+        </nav>
+      </div>
+    </header>
+    <main class="page-content">
+      <section class="page-header">
+        <div>
+          <h1>Random Recommender</h1>
+          <p>Let Readify surprise you with a fresh book based on your mood.</p>
+        </div>
+      </section>
+
+      <section class="grid grid-2">
+        <form class="card form" data-recommender-form>
+          <label>
+            Genre
+            <select name="genre" data-genre-select>
+              <option value="">Any genre</option>
+            </select>
+          </label>
+          <label>
+            Book length
+            <select name="length" data-length-select>
+              <option value="">Any length</option>
+              <option value="short">Short</option>
+              <option value="medium">Medium</option>
+              <option value="long">Long</option>
+            </select>
+          </label>
+          <div class="form-actions">
+            <button class="button" type="submit">Get Recommendation</button>
+            <button class="button secondary" type="button" data-pick-again>Pick Again</button>
+          </div>
+        </form>
+
+        <div class="card recommendation" data-recommendation-card>
+          <span class="badge" data-recommendation-genre>Any Genre</span>
+          <h2 class="recommendation-title" data-recommendation-title>Ready for a surprise?</h2>
+          <p class="recommendation-author" data-recommendation-author>
+            Choose a genre and length to start.
+          </p>
+          <p class="muted" data-recommendation-length></p>
+          <button class="button" type="button" data-save-recommendation disabled>
+            Save to Reading List
+          </button>
+        </div>
+      </section>
+
+      <section class="card reading-list">
+        <div class="reading-list-header">
+          <h2 class="section-title">Your Reading List</h2>
+          <button class="button secondary" type="button" data-clear-list>Clear List</button>
+        </div>
+        <ul class="reading-list-items" data-reading-list></ul>
+      </section>
+    </main>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/random-recommender.js"></script>
+  </body>
+</html>
